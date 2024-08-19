@@ -1,4 +1,4 @@
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
   user_id BIGSERIAL,
   username VARCHAR(255),
   first_name VARCHAR(255),
@@ -6,38 +6,31 @@ CREATE TABLE users (
   email VARCHAR(255)
 ); 
 
-CREATE TABLE friends (
+CREATE TABLE IF NOT EXISTS friends (
   user_id SERIAL,
   friends_id SERIAL,
 ); 
 
-CREATE TABLE watch_list (
+CREATE TABLE IF NOT EXISTS watch_list (
   user_id BIGINT,
   show_id BIGINT,
   movie_id BIGINT
 ); 
 
-CREATE TABLE watched_list (
+CREATE TABLE IF NOT EXISTS watched_list (
   user_id BIGINT,
   show_id BIGINT,
   movie_id BIGINT
 );
 
-CREATE TABLE reviews (
+CREATE TABLE IF NOT EXISTS reviews (
   user_id BIGINT,
   review_id BIGINT,
   score BIGINT,
   reviews VARCHAR(255)
 );
 
-CREATE TABLE reviews (
-  user_id BIGINT,
-  review_id BIGINT,
-  score BIGINT,
-  review VARCHAR(255)
-);
-
-CREATE TABLE reviews (
+CREATE TABLE IF NOT EXISTS reviews (
   user_id BIGINT,
   review_id BIGINT,
   score BIGINT,
